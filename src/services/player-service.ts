@@ -1,8 +1,9 @@
+import { findAllPlayers } from "../repositories/players-repository"
 import { noContent, ok } from "../utils/http-helper"
 
 export const getPlayerService =  async ()=> {
 
-    const data = { player: "Ronaldo" }
+    const data = await findAllPlayers()
     let response = null
 
     if(data){
@@ -10,6 +11,6 @@ export const getPlayerService =  async ()=> {
     }else{
         response = await noContent()
     }
-    
+
     return response
 }
