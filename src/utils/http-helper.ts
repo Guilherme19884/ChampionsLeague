@@ -1,4 +1,5 @@
-import { HttpResponse } from "../models/players-model"
+import { HttpResponse } from "../models/http-response-model"
+
 
 
 export const ok = async (data:any): Promise<HttpResponse> => {
