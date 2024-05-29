@@ -9,5 +9,7 @@ router.get("/players/:id", PlayerController.getPlayerId)
 
 router.post("/players", PlayerController.postPlayer)
 
+router.delete("/players/:id",PlayerController.deletePlayer)
+
 
 export default router
