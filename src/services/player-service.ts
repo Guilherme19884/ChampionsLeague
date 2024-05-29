@@ -1,4 +1,5 @@
 import { PlayerModel } from "../models/players-model"
+import { statisticsModel } from "../models/statistics-model"
 import { deleteOnePlayer, findAllPlayers, insertPlayer } from "../repositories/players-repository"
 import * as Http from "../utils/http-helper"
 
@@ -36,4 +37,8 @@ export const deletePlayerService = async (id: number)=> {
 
     response = Http.ok({message: "deleted"})
     return response
+}
+
+export const updatePlayerService = async(id: number, statistics: statisticsModel) => {
+    
 }

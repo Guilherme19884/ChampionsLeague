@@ -9,6 +9,8 @@ router.get("/players/:id", PlayerController.getPlayerId)
 
 router.post("/players", PlayerController.postPlayer)
 
+router.patch("/players/:id",PlayerController.updatePlayer)
+
 router.delete("/players/:id",PlayerController.deletePlayer)
 
 
