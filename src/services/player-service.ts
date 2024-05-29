@@ -1,5 +1,5 @@
 import { PlayerModel } from "../models/players-model"
-import { findAllPlayers, insertPlayer } from "../repositories/players-repository"
+import { deleteOnePlayer, findAllPlayers, insertPlayer } from "../repositories/players-repository"
 import * as Http from "../utils/http-helper"
 
 export const getPlayerService =  async ()=> {
@@ -32,4 +32,8 @@ export const createPlayerService = async (player: PlayerModel)=> {
 
 export const deletePlayerService = async (id: number)=> {
     let response = null
+    await deleteOnePlayer(id)
+
+    response = Http.ok({message: "deleted"})
+    return response
 }
